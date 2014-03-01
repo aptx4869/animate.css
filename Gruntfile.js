@@ -4,6 +4,13 @@ module.exports = function(grunt) {
 
   pkg: grunt.file.readJSON('package.json'),
   grunt.initConfig({
+    sass: {
+      dist: {
+        files: {
+          'source/_base.css': 'source/base.scss'
+        }
+      }
+    },
 
     // Concatenate CSS files
     concat: {
@@ -13,7 +20,7 @@ module.exports = function(grunt) {
           'source/_base.css',
           'source/**/*.css'
         ],
-        dest: 'animate.css'
+        dest: 'ng-animate.css'
       }
     },
 
@@ -24,15 +31,15 @@ module.exports = function(grunt) {
       },
       no_dest: {
         // File to output
-        src: 'animate.css'
+        src: 'ng-animate.css'
       },
     },
 
     // Minify CSS
     cssmin: {
       minify: {
-        src: ['animate.css'],
-        dest: 'animate.min.css',
+        src: ['ng-animate.css'],
+        dest: 'ng-animate.min.css',
       },
     },
 
@@ -56,17 +63,44 @@ module.exports = function(grunt) {
 
   grunt.registerTask('concat-anim', 'Concatenates activated animations', function () {
     var config = grunt.file.readJSON('animate-config.json'),
-        target = [ 'source/_base.css' ],
-        count = 0
+    target = [ 'source/_base.css' ],
+    enterAnimation = [],
+    leaveAnimation = [],
+    count = 0
 
-    for (var cat in config) {
-      for (var file in config[cat]) {
-        if (config[cat][file]) {
-          target.push('source/' + cat + '/' + file + '.css')
-          count++
+    for (var ani in config) {
+      for (var cat in config[ani]) {
+        for (var file in config[ani][cat]) {
+          if (config[ani][cat][file]) {
+            var fileName = 'source/' + ani + '/' + cat + '/' + file;
+            if (ani == "enter_animations") {
+              enterAnimation.push(file);
+            } else {
+              leaveAnimation.push(file);
+            }
+            target.push(fileName + '.scss');
+            count++
+          }
         }
       }
     }
+    var writeFile = function(file,content) {
+      var fs = require('fs');
+      fs.writeFile(file, content, function(err) {
+        if(err) {
+          grunt.log.writeln(err);
+        } else {
+          grunt.log.writeln("Generate file:" + file);
+        }
+      });
+    }
+
+    var content = "$enter-animations:\n"
+    content = content + enterAnimation.join(', ') + ';'
+    writeFile('source/_enter_animations.scss', content);
+    content = "$leave-animations:\n"
+    content = content + leaveAnimation.join(', ') + ';'
+    writeFile('source/_leave_animations.scss', content);
 
     if (!count) {
       grunt.log.writeln('No animations activated.')
@@ -74,7 +108,8 @@ module.exports = function(grunt) {
 
     grunt.log.writeln(count + (count > 1 ? ' animations' : ' animation') + ' activated.')
 
-    grunt.config('concat', { 'animate.css': target })
+    grunt.task.run('sass')
+    grunt.config('concat', { 'ng-animate.css': target })
     grunt.task.run('concat')
   });
 };

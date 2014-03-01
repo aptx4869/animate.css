@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -10,13 +9,149 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
+ */
+.ng-hide-add.bounceOut, .ng-leave.bounceOut {
+  animation-name: bounceOut; }
+.ng-hide-add.bounceOutDown, .ng-leave.bounceOutDown {
+  animation-name: bounceOutDown; }
+.ng-hide-add.bounceOutLeft, .ng-leave.bounceOutLeft {
+  animation-name: bounceOutLeft; }
+.ng-hide-add.bounceOutRight, .ng-leave.bounceOutRight {
+  animation-name: bounceOutRight; }
+.ng-hide-add.bounceOutUp, .ng-leave.bounceOutUp {
+  animation-name: bounceOutUp; }
+.ng-hide-add.fadeOut, .ng-leave.fadeOut {
+  animation-name: fadeOut; }
+.ng-hide-add.fadeOutDown, .ng-leave.fadeOutDown {
+  animation-name: fadeOutDown; }
+.ng-hide-add.fadeOutDownBig, .ng-leave.fadeOutDownBig {
+  animation-name: fadeOutDownBig; }
+.ng-hide-add.fadeOutLeft, .ng-leave.fadeOutLeft {
+  animation-name: fadeOutLeft; }
+.ng-hide-add.fadeOutLeftBig, .ng-leave.fadeOutLeftBig {
+  animation-name: fadeOutLeftBig; }
+.ng-hide-add.fadeOutRight, .ng-leave.fadeOutRight {
+  animation-name: fadeOutRight; }
+.ng-hide-add.fadeOutRightBig, .ng-leave.fadeOutRightBig {
+  animation-name: fadeOutRightBig; }
+.ng-hide-add.fadeOutUp, .ng-leave.fadeOutUp {
+  animation-name: fadeOutUp; }
+.ng-hide-add.fadeOutUpBig, .ng-leave.fadeOutUpBig {
+  animation-name: fadeOutUpBig; }
+.ng-hide-add.flipOutX, .ng-leave.flipOutX {
+  animation-name: flipOutX; }
+.ng-hide-add.flipOutY, .ng-leave.flipOutY {
+  animation-name: flipOutY; }
+.ng-hide-add.rotateOut, .ng-leave.rotateOut {
+  animation-name: rotateOut; }
+.ng-hide-add.rotateOutDownLeft, .ng-leave.rotateOutDownLeft {
+  animation-name: rotateOutDownLeft; }
+.ng-hide-add.rotateOutDownRight, .ng-leave.rotateOutDownRight {
+  animation-name: rotateOutDownRight; }
+.ng-hide-add.rotateOutUpLeft, .ng-leave.rotateOutUpLeft {
+  animation-name: rotateOutUpLeft; }
+.ng-hide-add.rotateOutUpRight, .ng-leave.rotateOutUpRight {
+  animation-name: rotateOutUpRight; }
+.ng-hide-add.slideOutLeft, .ng-leave.slideOutLeft {
+  animation-name: slideOutLeft; }
+.ng-hide-add.slideOutRight, .ng-leave.slideOutRight {
+  animation-name: slideOutRight; }
+.ng-hide-add.slideOutUp, .ng-leave.slideOutUp {
+  animation-name: slideOutUp; }
+.ng-hide-add.lightSpeedOut, .ng-leave.lightSpeedOut {
+  animation-name: lightSpeedOut; }
+.ng-hide-add.rollOut, .ng-leave.rollOut {
+  animation-name: rollOut; }
+
+.ng-hide-remove.bounce, .ng-enter.bounce {
+  animation-name: bounce; }
+.ng-hide-remove.flash, .ng-enter.flash {
+  animation-name: flash; }
+.ng-hide-remove.pulse, .ng-enter.pulse {
+  animation-name: pulse; }
+.ng-hide-remove.rubberBand, .ng-enter.rubberBand {
+  animation-name: rubberBand; }
+.ng-hide-remove.shake, .ng-enter.shake {
+  animation-name: shake; }
+.ng-hide-remove.swing, .ng-enter.swing {
+  animation-name: swing; }
+.ng-hide-remove.tada, .ng-enter.tada {
+  animation-name: tada; }
+.ng-hide-remove.wobble, .ng-enter.wobble {
+  animation-name: wobble; }
+.ng-hide-remove.bounceIn, .ng-enter.bounceIn {
+  animation-name: bounceIn; }
+.ng-hide-remove.bounceInDown, .ng-enter.bounceInDown {
+  animation-name: bounceInDown; }
+.ng-hide-remove.bounceInLeft, .ng-enter.bounceInLeft {
+  animation-name: bounceInLeft; }
+.ng-hide-remove.bounceInRight, .ng-enter.bounceInRight {
+  animation-name: bounceInRight; }
+.ng-hide-remove.bounceInUp, .ng-enter.bounceInUp {
+  animation-name: bounceInUp; }
+.ng-hide-remove.fadeIn, .ng-enter.fadeIn {
+  animation-name: fadeIn; }
+.ng-hide-remove.fadeInDown, .ng-enter.fadeInDown {
+  animation-name: fadeInDown; }
+.ng-hide-remove.fadeInDownBig, .ng-enter.fadeInDownBig {
+  animation-name: fadeInDownBig; }
+.ng-hide-remove.fadeInLeft, .ng-enter.fadeInLeft {
+  animation-name: fadeInLeft; }
+.ng-hide-remove.fadeInLeftBig, .ng-enter.fadeInLeftBig {
+  animation-name: fadeInLeftBig; }
+.ng-hide-remove.fadeInRight, .ng-enter.fadeInRight {
+  animation-name: fadeInRight; }
+.ng-hide-remove.fadeInRightBig, .ng-enter.fadeInRightBig {
+  animation-name: fadeInRightBig; }
+.ng-hide-remove.fadeInUp, .ng-enter.fadeInUp {
+  animation-name: fadeInUp; }
+.ng-hide-remove.fadeInUpBig, .ng-enter.fadeInUpBig {
+  animation-name: fadeInUpBig; }
+.ng-hide-remove.flip, .ng-enter.flip {
+  animation-name: flip; }
+.ng-hide-remove.flipInX, .ng-enter.flipInX {
+  animation-name: flipInX; }
+.ng-hide-remove.flipInY, .ng-enter.flipInY {
+  animation-name: flipInY; }
+.ng-hide-remove.rotateIn, .ng-enter.rotateIn {
+  animation-name: rotateIn; }
+.ng-hide-remove.rotateInDownLeft, .ng-enter.rotateInDownLeft {
+  animation-name: rotateInDownLeft; }
+.ng-hide-remove.rotateInDownRight, .ng-enter.rotateInDownRight {
+  animation-name: rotateInDownRight; }
+.ng-hide-remove.rotateInUpLeft, .ng-enter.rotateInUpLeft {
+  animation-name: rotateInUpLeft; }
+.ng-hide-remove.rotateInUpRight, .ng-enter.rotateInUpRight {
+  animation-name: rotateInUpRight; }
+.ng-hide-remove.slideInDown, .ng-enter.slideInDown {
+  animation-name: slideInDown; }
+.ng-hide-remove.slideInLeft, .ng-enter.slideInLeft {
+  animation-name: slideInLeft; }
+.ng-hide-remove.slideInRight, .ng-enter.slideInRight {
+  animation-name: slideInRight; }
+.ng-hide-remove.lightSpeedIn, .ng-enter.lightSpeedIn {
+  animation-name: lightSpeedIn; }
+.ng-hide-remove.hinge, .ng-enter.hinge {
+  animation-name: hinge; }
+.ng-hide-remove.rollIn, .ng-enter.rollIn {
+  animation-name: rollIn; }
+
+bounceOut.ng-hide-add, bounceOut.ng-leave, bounceOutDown.ng-hide-add, bounceOutDown.ng-leave, bounceOutLeft.ng-hide-add, bounceOutLeft.ng-leave, bounceOutRight.ng-hide-add, bounceOutRight.ng-leave, bounceOutUp.ng-hide-add, bounceOutUp.ng-leave, fadeOut.ng-hide-add, fadeOut.ng-leave, fadeOutDown.ng-hide-add, fadeOutDown.ng-leave, fadeOutDownBig.ng-hide-add, fadeOutDownBig.ng-leave, fadeOutLeft.ng-hide-add, fadeOutLeft.ng-leave, fadeOutLeftBig.ng-hide-add, fadeOutLeftBig.ng-leave, fadeOutRight.ng-hide-add, fadeOutRight.ng-leave, fadeOutRightBig.ng-hide-add, fadeOutRightBig.ng-leave, fadeOutUp.ng-hide-add, fadeOutUp.ng-leave, fadeOutUpBig.ng-hide-add, fadeOutUpBig.ng-leave, flipOutX.ng-hide-add, flipOutX.ng-leave, flipOutY.ng-hide-add, flipOutY.ng-leave, rotateOut.ng-hide-add, rotateOut.ng-leave, rotateOutDownLeft.ng-hide-add, rotateOutDownLeft.ng-leave, rotateOutDownRight.ng-hide-add, rotateOutDownRight.ng-leave, rotateOutUpLeft.ng-hide-add, rotateOutUpLeft.ng-leave, rotateOutUpRight.ng-hide-add, rotateOutUpRight.ng-leave, slideOutLeft.ng-hide-add, slideOutLeft.ng-leave, slideOutRight.ng-hide-add, slideOutRight.ng-leave, slideOutUp.ng-hide-add, slideOutUp.ng-leave, lightSpeedOut.ng-hide-add, lightSpeedOut.ng-leave, rollOut.ng-hide-add, rollOut.ng-leave {
+  animation-duration: 1s; }
 
 .animated {
-  animation-duration: 1s;
   animation-fill-mode: both;
-}
+  animation-duration: 1s; }
+  .animated.hinge {
+    animation-duration: 2s; }
 
-.animated.hinge {
-	animation-duration: 2s;
-}
+.ng-hide-add, .ng-leave {
+  animation-name: voidAnimation;
+  animation-duration: 0s; }
+
+@keyframes voidAnimation {
+  0% {
+    visibility: hidden; }
+
+  100% {
+    visibility: hidden; } }
